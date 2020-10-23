@@ -1,0 +1,17 @@
+html,
+body {
+  font-family: "Hevetica Nuew", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  max-width: 1600px;
+  margin: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
