@@ -1,11 +1,11 @@
 import React, { useContext, useState } from 'react'
 import QuestionsData from '../Data/questions.json'
-import AnswerButton from "../Components/Answer/AnswerButton"
-import AnswerButtonsWrapper from "../Components/Answer/AnswerButtonsWrapper"
-import AnswerResult from "../Components/Answer/AnswerResult"
-import AnswerSectionWrapper from "../Components/Answer/AnswerSectionWrapper"
-import NextQuestionButton from "../Components/Answer/NextQuestionButton"
-import NextQuestionButtonWrapper from "../Components/Answer/NextQuestionButtonWrapper"
+import AnswerButton from '../Components/Answer/AnswerButton'
+import AnswerButtonsWrapper from '../Components/Answer/AnswerButtonsWrapper'
+import AnswerResult from '../Components/Answer/AnswerResult'
+import AnswerSectionWrapper from '../Components/Answer/AnswerSectionWrapper'
+import NextQuestionButton from '../Components/Answer/NextQuestionButton'
+import NextQuestionButtonWrapper from '../Components/Answer/NextQuestionButtonWrapper'
 import FinishMessage from '../Components/Answer/FinishMessage'
 import FinishMessageOverlay from '../Components/Answer/FinishMessageOverlay'
 import { CurrentQuestionContext } from '../Context/CurrentQuestionContext'
@@ -15,22 +15,33 @@ import { WrongAnswersContext } from '../Context/WrongAnswersContext'
 
 export default AnswerCompound
 
-function AnswerCompound({ children }) {
-  const [currentQuestion, setCurrentQuestion] = useContext(CurrentQuestionContext)
-  const [showAnswerResult, setShowAnswerResult] = useContext(AnswerResultContext)
-  const [correctAnswersNumber, setCorrectAnswersNumber] = useContext(CorrectAnswersContext)
-  const [wrongAnswersNumber, setWrongAnswersNumber] = useContext(WrongAnswersContext)
+function AnswerCompound ({ children }) {
+  const [currentQuestion, setCurrentQuestion] = useContext(
+    CurrentQuestionContext
+  )
+  const [showAnswerResult, setShowAnswerResult] = useContext(
+    AnswerResultContext
+  )
+  const [correctAnswersNumber, setCorrectAnswersNumber] = useContext(
+    CorrectAnswersContext
+  )
+  const [wrongAnswersNumber, setWrongAnswersNumber] = useContext(
+    WrongAnswersContext
+  )
   const [finalResult, setFinalResult] = useState('')
   const [showFinishMessage, setShowFinishMessage] = useState(false)
 
-  const answersArray = [QuestionsData[currentQuestion - 1].correct_answer].concat(QuestionsData[currentQuestion - 1].incorrect_answers)
+  const answersArray = [
+    QuestionsData[currentQuestion - 1].correct_answer
+  ].concat(QuestionsData[currentQuestion - 1].incorrect_answers)
   const correctAnswer = answersArray[0]
 
-  function checkAnswer(answer) {
+  function checkAnswer (answer) {
     if (answer === correctAnswer) {
       setShowAnswerResult('Correct Answer!')
       setFinalResult('correct')
-    } if (answer !== correctAnswer) {
+    }
+    if (answer !== correctAnswer) {
       setShowAnswerResult('Wrong Answer!')
       setFinalResult('wrong')
     }
@@ -40,7 +51,8 @@ function AnswerCompound({ children }) {
     if (currentQuestion === QuestionsData.length) {
       if (finalResult === 'correct') {
         setCorrectAnswersNumber(correctAnswersNumber + 1)
-      } if (finalResult === 'wrong') {
+      }
+      if (finalResult === 'wrong') {
         setWrongAnswersNumber(wrongAnswersNumber + 1)
       }
       setFinalResult('')
@@ -52,7 +64,8 @@ function AnswerCompound({ children }) {
 
     if (finalResult === 'correct') {
       setCorrectAnswersNumber(correctAnswersNumber + 1)
-    } if (finalResult === 'wrong') {
+    }
+    if (finalResult === 'wrong') {
       setWrongAnswersNumber(wrongAnswersNumber + 1)
     }
     setFinalResult('')
@@ -61,7 +74,7 @@ function AnswerCompound({ children }) {
   return (
     <>
       <AnswerSectionWrapper>
-      <AnswerButtonsWrapper>
+        <AnswerButtonsWrapper>
           {answersArray.map((answer, index) => (
             <AnswerButton
               key={index}
@@ -74,11 +87,18 @@ function AnswerCompound({ children }) {
         </AnswerButtonsWrapper>
         <AnswerResult>{showAnswerResult}</AnswerResult>
         <NextQuestionButtonWrapper>
-          {showAnswerResult === '' ? null
-            : (<NextQuestionButton onClick={doButtonClickActions}>Next Question</NextQuestionButton>)}
+          {showAnswerResult === '' ? null : (
+            <NextQuestionButton onClick={doButtonClickActions}>
+              Next Question
+            </NextQuestionButton>
+          )}
         </NextQuestionButtonWrapper>
       </AnswerSectionWrapper>
-      {showFinishMessage ? (<FinishMessageOverlay><FinishMessage /></FinishMessageOverlay>) : null}
+      {showFinishMessage ? (
+        <FinishMessageOverlay>
+          <FinishMessage />
+        </FinishMessageOverlay>
+      ) : null}
       {children}
     </>
   )

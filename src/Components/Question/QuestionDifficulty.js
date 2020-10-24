@@ -1,11 +1,11 @@
 import React, { useContext } from 'react'
-import "./Question.css"
+import './Question.css'
 import QuestionsData from '../../Data/questions.json'
 import { CurrentQuestionContext } from '../../Context/CurrentQuestionContext'
 
 export default QuestionDifficulty
 
-function QuestionDifficulty({ children, ...restProps }) {
+function QuestionDifficulty ({ children, ...restProps }) {
   const [CurrentQuestion] = useContext(CurrentQuestionContext)
 
   function getNumberOfStars () {
@@ -19,7 +19,7 @@ function QuestionDifficulty({ children, ...restProps }) {
   }
 
   return (
-    <p className="question-difficulty" {...restProps}>
+    <p className='question-difficulty' {...restProps}>
       {getNumberOfStars()}
       {children}
     </p>
