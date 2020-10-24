@@ -17,6 +17,12 @@ function ScoreBarCompound({ children }) {
   const [correctAnswersNumber] = useContext(CorrectAnswersContext)
   const [wrongAnswersNumber] = useContext(WrongAnswersContext)
 
+  const totalQuestions = QuestionsData.length
+  const totalAnsweredQuestions = currentQuestion - 1
+  const score = (correctAnswersNumber / totalAnsweredQuestions) * 100
+  const lowestScore = (correctAnswersNumber / totalQuestions) * 100
+  const maximumScore = ((totalQuestions - wrongAnswersNumber) / totalQuestions) * 100
+
   return (
     <>
       <ScoreSectionWrapper>
