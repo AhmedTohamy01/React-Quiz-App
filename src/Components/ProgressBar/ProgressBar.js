@@ -11,7 +11,7 @@ function ProgressBar({ children, ...restProps }) {
   const widthPercentage = (currentQuestion / totalQuestions) * 100
 
   return (
-    <div className='progress-bar' {...restProps}>
+    <div className='progress-bar' style={{ width: `${widthPercentage}%` }} {...restProps}>
       {children}
     </div>
   )
