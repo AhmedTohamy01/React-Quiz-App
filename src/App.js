@@ -1,10 +1,11 @@
 import React from 'react'
+import QuizCompound from './Compounds/QuizCompound'
 
 function App () {
   return (
-    <div>
-      hello app
-    </div>
+    <>
+      <QuizCompound />
+    </>
   )
 }
 
