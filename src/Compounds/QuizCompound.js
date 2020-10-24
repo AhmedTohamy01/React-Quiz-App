@@ -18,7 +18,7 @@ function QuizCompound({ children }) {
     <>
       <CurrentQuestionContext.Provider value={[currentQuestion, setCurrentQuestion]}>
         <AnswerResultContext.Provider value={[showAnswerResult, setShowAnswerResult]}>
-          <CorrectAnswersContext.Provider>
+          <CorrectAnswersContext.Provider value={[correctAnswersNumber, setCorrectAnswersNumber]}>
             <ProgressBar />
             <QuestionCompound />
             <AnswerCompound />
