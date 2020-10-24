@@ -21,3 +21,12 @@
   }
 }
 
+.score-bar-wrapper {
+  border: 1px solid black;
+  height: 30px;
+  width: 70%;
+  border-radius: 10px;
+  position: relative;
+  bottom: 13%;
+  z-index: 1;
+}
