@@ -2,3 +2,8 @@
   border: solid green;
   height: 100px;
 }
+
+.question-number {
+  font-size: 25px;
+  font-weight: 700;
+}
