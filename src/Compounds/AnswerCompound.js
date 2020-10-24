@@ -50,7 +50,8 @@ function AnswerCompound({ children }) {
         </AnswerButtonsWrapper>
         <AnswerResult>{showAnswerResult}</AnswerResult>
         <NextQuestionButtonWrapper>
-          <NextQuestionButton>Next Question</NextQuestionButton>
+          {showAnswerResult === '' ? null
+            : (<NextQuestionButton>Next Question</NextQuestionButton>)}
         </NextQuestionButtonWrapper>
       </AnswerSectionWrapper>
       {children}
