@@ -4,5 +4,5 @@ import ProgressBar from '../Components/ProgressBar/ProgressBar'
 export default QuizCompound
 
 function QuizCompound ({ children }) {
-  return <><ProgressBar /></>
+  return <><ProgressBar />{ children }</>
 }
