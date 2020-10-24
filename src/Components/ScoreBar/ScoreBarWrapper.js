@@ -4,5 +4,9 @@ import './ScoreBar.css'
 export default ScoreBarWrapper
 
 function ScoreBarWrapper ({ children, ...restProps }) {
-  return <div className='score-bar-wrapper' {...restProps}>{children}</div>
+  return (
+    <div className='score-bar-wrapper' {...restProps}>
+      {children}
+    </div>
+  )
 }

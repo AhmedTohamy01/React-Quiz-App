@@ -1,11 +1,11 @@
-import React from "react"
-import "./Answer.css"
+import React from 'react'
+import './Answer.css'
 
 export default AnswerButton
 
-function AnswerButton({ children, ...restProps }) {
+function AnswerButton ({ children, ...restProps }) {
   return (
-    <button className="answer-button" {...restProps}>
+    <button className='answer-button' {...restProps}>
       {children}
     </button>
   )

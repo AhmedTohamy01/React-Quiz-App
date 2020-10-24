@@ -14,7 +14,7 @@ import { WrongAnswersContext } from '../Context/WrongAnswersContext'
 
 export default ScoreBarCompound
 
-function ScoreBarCompound({ children }) {
+function ScoreBarCompound ({ children }) {
   const [currentQuestion] = useContext(CurrentQuestionContext)
   const [correctAnswersNumber] = useContext(CorrectAnswersContext)
   const [wrongAnswersNumber] = useContext(WrongAnswersContext)
@@ -23,13 +23,14 @@ function ScoreBarCompound({ children }) {
   const totalAnsweredQuestions = currentQuestion - 1
   const score = (correctAnswersNumber / totalAnsweredQuestions) * 100
   const lowestScore = (correctAnswersNumber / totalQuestions) * 100
-  const maximumScore = ((totalQuestions - wrongAnswersNumber) / totalQuestions) * 100
+  const maximumScore =
+    ((totalQuestions - wrongAnswersNumber) / totalQuestions) * 100
 
   return (
     <>
       <ScoreSectionWrapper>
         <ScoreBarData>
-        <UserScore>
+          <UserScore>
             {totalAnsweredQuestions === 0
               ? 'Score: 0%'
               : `Score: ${Math.round(score)}%`}
@@ -41,12 +42,12 @@ function ScoreBarCompound({ children }) {
           </MaxScore>
         </ScoreBarData>
         <ScoreBarWrapper>
-          <LowestScoreBar style={{ width: `${Math.round(lowestScore)}%` }}/>
-          <ScoreBar style={{ width: `${Math.round(score)}%` }}/>
-          <MaximumScoreBar style={{ width: `${Math.round(maximumScore)}%` }}/>
+          <LowestScoreBar style={{ width: `${Math.round(lowestScore)}%` }} />
+          <ScoreBar style={{ width: `${Math.round(score)}%` }} />
+          <MaximumScoreBar style={{ width: `${Math.round(maximumScore)}%` }} />
         </ScoreBarWrapper>
       </ScoreSectionWrapper>
-        {children}
+      {children}
     </>
   )
 }

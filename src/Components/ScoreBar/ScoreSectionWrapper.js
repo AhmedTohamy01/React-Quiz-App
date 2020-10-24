@@ -1,11 +1,11 @@
-import React from "react"
-import "./ScoreBar.css"
+import React from 'react'
+import './ScoreBar.css'
 
 export default ScoreSectionWrapper
 
-function ScoreSectionWrapper({ children, ...restProps }) {
+function ScoreSectionWrapper ({ children, ...restProps }) {
   return (
-    <div className="score-section-wrapper" {...restProps}>
+    <div className='score-section-wrapper' {...restProps}>
       {children}
     </div>
   )

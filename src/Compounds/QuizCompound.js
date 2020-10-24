@@ -10,7 +10,7 @@ import { WrongAnswersContext } from '../Context/WrongAnswersContext'
 
 export default QuizCompound
 
-function QuizCompound({ children }) {
+function QuizCompound ({ children }) {
   const [currentQuestion, setCurrentQuestion] = useState(1)
   const [showAnswerResult, setShowAnswerResult] = useState('')
   const [correctAnswersNumber, setCorrectAnswersNumber] = useState(0)
@@ -18,10 +18,18 @@ function QuizCompound({ children }) {
 
   return (
     <>
-      <CurrentQuestionContext.Provider value={[currentQuestion, setCurrentQuestion]}>
-        <AnswerResultContext.Provider value={[showAnswerResult, setShowAnswerResult]}>
-          <CorrectAnswersContext.Provider value={[correctAnswersNumber, setCorrectAnswersNumber]}>
-            <WrongAnswersContext.Provider value={[wrongAnswersNumber, setWrongAnswersNumber]}>
+      <CurrentQuestionContext.Provider
+        value={[currentQuestion, setCurrentQuestion]}
+      >
+        <AnswerResultContext.Provider
+          value={[showAnswerResult, setShowAnswerResult]}
+        >
+          <CorrectAnswersContext.Provider
+            value={[correctAnswersNumber, setCorrectAnswersNumber]}
+          >
+            <WrongAnswersContext.Provider
+              value={[wrongAnswersNumber, setWrongAnswersNumber]}
+            >
               <ProgressBar />
               <QuestionCompound />
               <AnswerCompound />
