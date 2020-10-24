@@ -7,12 +7,14 @@ import ScoreSectionWrapper from '../Components/ScoreBar/ScoreSectionWrapper'
 import UserScore from '../Components/ScoreBar/UserScore'
 import { CurrentQuestionContext } from '../Context/CurrentQuestionContext'
 import { CorrectAnswersContext } from '../Context/CorrectAnswersContext'
+import { WrongAnswersContext } from '../Context/WrongAnswersContext'
 
 export default ScoreBarCompound
 
 function ScoreBarCompound({ children }) {
   const [currentQuestion] = useContext(CurrentQuestionContext)
   const [correctAnswersNumber] = useContext(CorrectAnswersContext)
+  const [wrongAnswersNumber] = useContext(WrongAnswersContext)
 
   return (
     <>
