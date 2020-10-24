@@ -18,11 +18,11 @@ function AnswerCompound({ children }) {
           <AnswerButton>Answer3</AnswerButton>
           <AnswerButton>Answer4</AnswerButton>
         </AnswerButtonsWrapper>
+        <AnswerResult>Correct Answer!</AnswerResult>
+        <NextQuestionButtonWrapper>
+          <NextQuestionButton>Next Question</NextQuestionButton>
+        </NextQuestionButtonWrapper>
       </AnswerSectionWrapper>
-      <AnswerResult>Correct Answer!</AnswerResult>
-      <NextQuestionButtonWrapper>
-        <NextQuestionButton>Next Question</NextQuestionButton>
-      </NextQuestionButtonWrapper>
       {children}
     </>
   )
