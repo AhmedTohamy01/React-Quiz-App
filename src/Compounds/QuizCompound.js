@@ -12,6 +12,7 @@ export default QuizCompound
 function QuizCompound({ children }) {
   const [currentQuestion, setCurrentQuestion] = useState(1)
   const [showAnswerResult, setShowAnswerResult] = useState('')
+  const [correctAnswersNumber, setCorrectAnswersNumber] = useState(0)
 
   return (
     <>
