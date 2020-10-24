@@ -49,3 +49,10 @@
   font-size: 18px;
   border: 1px solid black;
 }
+
+@media (max-width: 768px) {
+  .next-question-button {
+    height: 100px;
+    padding: 10px 20px;
+  }
+}
