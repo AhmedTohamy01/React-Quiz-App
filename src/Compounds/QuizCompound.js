@@ -6,6 +6,7 @@ import ScoreBarCompound from './ScoreBarCompound'
 import { CurrentQuestionContext } from '../Context/CurrentQuestionContext'
 import { AnswerResultContext } from '../Context/AnswerResultContext'
 import { CorrectAnswersContext } from '../Context/CorrectAnswersContext'
+import { WrongAnswersContext } from '../Context/WrongAnswersContext'
 
 export default QuizCompound
 
@@ -20,11 +21,13 @@ function QuizCompound({ children }) {
       <CurrentQuestionContext.Provider value={[currentQuestion, setCurrentQuestion]}>
         <AnswerResultContext.Provider value={[showAnswerResult, setShowAnswerResult]}>
           <CorrectAnswersContext.Provider value={[correctAnswersNumber, setCorrectAnswersNumber]}>
-            <ProgressBar />
-            <QuestionCompound />
-            <AnswerCompound />
-            <ScoreBarCompound />
+            <WrongAnswersContext.Provider value={[correctAnswersNumber, setCorrectAnswersNumber]}>
+              <ProgressBar />
+              <QuestionCompound />
+              <AnswerCompound />
+              <ScoreBarCompound />
               {children}
+            </WrongAnswersContext.Provider>
           </CorrectAnswersContext.Provider>
         </AnswerResultContext.Provider>
       </CurrentQuestionContext.Provider>
