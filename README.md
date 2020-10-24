@@ -8,7 +8,7 @@
 <p><font size="3">
   This is a Quiz Project from Outlier built using <strong><em>React.JS</em></strong> 
   <br><br> 
-  <strong><em>Take a look at the live version here:</em></strong> https://link.here :octocat: :heart_eyes:
+  <strong><em>Take a look at the live version here:</em></strong> https://react-quiz-app-theta.vercel.app/ :octocat: :heart_eyes:
 
 </p>
 
@@ -64,7 +64,7 @@
 
 # Live Demo
 
-***Take a look on the live version here:*** https://link.here
+***Take a look on the live version here:*** https://react-quiz-app-theta.vercel.app/
 
 
 # Technology Used
