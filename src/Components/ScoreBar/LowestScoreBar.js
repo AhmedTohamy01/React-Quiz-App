@@ -4,5 +4,5 @@ import './ScoreBar.css'
 export default LowestScoreBar
 
 function LowestScoreBar ({ children, ...restProps }) {
-  return <div {...restProps}>{children}</div>
+  return <div className='lowest-score-bar' {...restProps}>{children}</div>
 }

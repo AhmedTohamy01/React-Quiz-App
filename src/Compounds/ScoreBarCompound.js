@@ -41,7 +41,7 @@ function ScoreBarCompound({ children }) {
           </MaxScore>
         </ScoreBarData>
         <ScoreBarWrapper>
-          <LowestScoreBar/>
+          <LowestScoreBar style={{ width: `${Math.round(lowestScore)}%` }}/>
           <ScoreBar style={{ width: `${Math.round(score)}%` }}/>
           <MaximumScoreBar style={{ width: `${Math.round(maximumScore)}%` }}/>
         </ScoreBarWrapper>
