@@ -13,6 +13,8 @@ export default AnswerCompound
 function AnswerCompound({ children }) {
   const [currentQuestion, setCurrentQuestion] = useContext(CurrentQuestionContext)
 
+  const answersArray = [QuestionsData[currentQuestion - 1].correct_answer].concat(QuestionsData[currentQuestion - 1].incorrect_answers)
+
   return (
     <>
       <AnswerSectionWrapper>
