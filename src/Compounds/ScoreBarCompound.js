@@ -1,4 +1,5 @@
 import React, { useContext } from 'react'
+import QuestionsData from '../Data/questions.json'
 import MaxScore from '../Components/ScoreBar/MaxScore'
 import ScoreBar from '../Components/ScoreBar/ScoreBar'
 import ScoreBarData from '../Components/ScoreBar/ScoreBarData'
