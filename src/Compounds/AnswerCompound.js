@@ -18,6 +18,7 @@ function AnswerCompound({ children }) {
         </AnswerButtonsWrapper>
       </AnswerSectionWrapper>
       <AnswerResult>Correct Answer!</AnswerResult>
+      <AnswerButton>Next Question</AnswerButton>
       {children}
     </>
   )
