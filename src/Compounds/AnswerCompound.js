@@ -19,6 +19,16 @@ function AnswerCompound({ children }) {
   const answersArray = [QuestionsData[currentQuestion - 1].correct_answer].concat(QuestionsData[currentQuestion - 1].incorrect_answers)
   const correctAnswer = answersArray[0]
 
+  function checkAnswer(answer) {
+    if (answer === correctAnswer) {
+      setShowAnswerResult('Correct Answer!')
+      setFinalResult('correct')
+    } if (answer !== correctAnswer) {
+      setShowAnswerResult('Wrong Answer!')
+      setFinalResult('wrong')
+    }
+  }
+
   return (
     <>
       <AnswerSectionWrapper>
@@ -26,12 +36,14 @@ function AnswerCompound({ children }) {
           {answersArray.map((answer, index) => (
             <AnswerButton
               key={index}
+              disabled={showAnswerResult !== ''}
+              onClick={() => checkAnswer(answer)}
             >
               {decodeURIComponent(answer)}
             </AnswerButton>
           ))}
         </AnswerButtonsWrapper>
-        <AnswerResult>Correct Answer!</AnswerResult>
+        <AnswerResult>{showAnswerResult}</AnswerResult>
         <NextQuestionButtonWrapper>
           <NextQuestionButton>Next Question</NextQuestionButton>
         </NextQuestionButtonWrapper>
