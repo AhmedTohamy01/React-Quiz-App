@@ -1,14 +1,17 @@
-import React from "react"
+import React, { useContext } from 'react'
 import AnswerButton from "../Components/Answer/AnswerButton"
 import AnswerButtonsWrapper from "../Components/Answer/AnswerButtonsWrapper"
 import AnswerResult from "../Components/Answer/AnswerResult"
 import AnswerSectionWrapper from "../Components/Answer/AnswerSectionWrapper"
 import NextQuestionButton from "../Components/Answer/NextQuestionButton"
 import NextQuestionButtonWrapper from "../Components/Answer/NextQuestionButtonWrapper"
+import { CurrentQuestionContext } from '../Context/CurrentQuestionContext'
 
 export default AnswerCompound
 
 function AnswerCompound({ children }) {
+  const [currentQuestion, setCurrentQuestion] = useContext(CurrentQuestionContext)
+
   return (
     <>
       <AnswerSectionWrapper>
