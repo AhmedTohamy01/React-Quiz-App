@@ -40,3 +40,12 @@
   font-weight: 700;
   text-align: center;
 }
+
+.next-question-button {
+  padding: 10px 30px;
+  border-radius: 5px;
+  background-color: rgb(187, 179, 179);
+  font-weight: 500;
+  font-size: 18px;
+  border: 1px solid black;
+}
