@@ -7,15 +7,17 @@ import AnswerSectionWrapper from "../Components/Answer/AnswerSectionWrapper"
 import NextQuestionButton from "../Components/Answer/NextQuestionButton"
 import NextQuestionButtonWrapper from "../Components/Answer/NextQuestionButtonWrapper"
 import { CurrentQuestionContext } from '../Context/CurrentQuestionContext'
+import { AnswerResultContext } from '../Context/AnswerResultContext'
 
 export default AnswerCompound
 
 function AnswerCompound({ children }) {
   const [currentQuestion, setCurrentQuestion] = useContext(CurrentQuestionContext)
+  const [showAnswerResult, setShowAnswerResult] = useContext(AnswerResultContext)
 
   const answersArray = [QuestionsData[currentQuestion - 1].correct_answer].concat(QuestionsData[currentQuestion - 1].incorrect_answers)
   const correctAnswer = answersArray[0]
-  
+
   return (
     <>
       <AnswerSectionWrapper>
