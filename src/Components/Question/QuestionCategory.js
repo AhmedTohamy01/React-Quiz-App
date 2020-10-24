@@ -1,12 +1,16 @@
-import React from "react"
+import React, { useContext } from 'react'
 import "./Question.css"
+import QuestionsData from '../../Data/questions.json'
+import { CurrentQuestionContext } from '../../Context/CurrentQuestionContext'
 
 export default QuestionCategory
 
 function QuestionCategory({ children, ...restProps }) {
+  const [currentQuestion] = useContext(CurrentQuestionContext)
+
   return (
     <p className="question-category" {...restProps}>
-      Movies: Board Games
+      {decodeURIComponent(QuestionsData[currentQuestion - 1].category)}
       {children}
     </p>
   )
