@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import QuestionsData from '../../Data/questions.json'
+import QuestionsData from '../Data/questions.json'
 import AnswerButton from "../Components/Answer/AnswerButton"
 import AnswerButtonsWrapper from "../Components/Answer/AnswerButtonsWrapper"
 import AnswerResult from "../Components/Answer/AnswerResult"
