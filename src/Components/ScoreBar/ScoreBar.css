@@ -38,3 +38,12 @@
   position: absolute;
   z-index: 3;
 }
+
+.maximum-score-bar {
+  background-color: rgb(218, 204, 204);
+  height: 27.5px;
+  border-radius: 10px;
+  width: 0%;
+  position: absolute;
+  z-index: 2;
+}
