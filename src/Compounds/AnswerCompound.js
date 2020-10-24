@@ -3,6 +3,7 @@ import AnswerButton from "../Components/Answer/AnswerButton"
 import AnswerButtonsWrapper from "../Components/Answer/AnswerButtonsWrapper"
 import AnswerResult from "../Components/Answer/AnswerResult"
 import AnswerSectionWrapper from "../Components/Answer/AnswerSectionWrapper"
+import NextQuestionButtonWrapper from "../Components/Answer/NextQuestionButtonWrapper"
 
 export default AnswerCompound
 
@@ -18,7 +19,9 @@ function AnswerCompound({ children }) {
         </AnswerButtonsWrapper>
       </AnswerSectionWrapper>
       <AnswerResult>Correct Answer!</AnswerResult>
-      <AnswerButton>Next Question</AnswerButton>
+      <NextQuestionButtonWrapper>
+        <AnswerButton>Next Question</AnswerButton>
+      </NextQuestionButtonWrapper>
       {children}
     </>
   )
