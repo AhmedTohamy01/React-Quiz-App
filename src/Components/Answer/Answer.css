@@ -28,6 +28,13 @@
   width: 45%;
 }
 
+@media (max-width: 768px) {
+  .answer-button {
+    height: 100px;
+    padding: 10px;
+  }
+}
+
 .answer-result {
   font-size: 25px;
   font-weight: 700;
