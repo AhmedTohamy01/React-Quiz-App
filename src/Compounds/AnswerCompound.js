@@ -1,11 +1,12 @@
 import React from 'react'
+import AnswerSectionWrapper from '../Components/Answer/AnswerSectionWrapper'
 
 export default AnswerCompound
 
 function AnswerCompound ({ children }) {
   return (
     <>
-      Answer compound
+      <AnswerSectionWrapper />
       {children}
     </>
   )
