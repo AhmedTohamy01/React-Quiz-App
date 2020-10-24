@@ -6,7 +6,7 @@ export default QuestionText
 function QuestionText({ children, ...restProps }) {
   return (
     <p className="question-text" {...restProps}>
-      Movies: Board Games
+      What was the name of the hero in the 80s animated video games ?
       {children}
     </p>
   )
