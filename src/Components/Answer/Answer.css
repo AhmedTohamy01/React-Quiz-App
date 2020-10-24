@@ -1,6 +1,6 @@
 .answer-section-wrapper {
   border: solid yellow;
-  height: 100px;
+  padding: 0px 100px;
 }
 
 @media (max-width: 768px) {
