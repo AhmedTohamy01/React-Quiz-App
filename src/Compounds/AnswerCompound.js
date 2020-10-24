@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import QuestionsData from '../Data/questions.json'
 import AnswerButton from "../Components/Answer/AnswerButton"
 import AnswerButtonsWrapper from "../Components/Answer/AnswerButtonsWrapper"
@@ -14,6 +14,7 @@ export default AnswerCompound
 function AnswerCompound({ children }) {
   const [currentQuestion, setCurrentQuestion] = useContext(CurrentQuestionContext)
   const [showAnswerResult, setShowAnswerResult] = useContext(AnswerResultContext)
+  const [finalResult, setFinalResult] = useState('')
 
   const answersArray = [QuestionsData[currentQuestion - 1].correct_answer].concat(QuestionsData[currentQuestion - 1].incorrect_answers)
   const correctAnswer = answersArray[0]
