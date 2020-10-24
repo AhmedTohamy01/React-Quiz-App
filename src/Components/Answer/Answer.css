@@ -2,3 +2,12 @@
   border: solid yellow;
   height: 100px;
 }
+
+
+.answer-buttons-wrapper {
+  border: solid green;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
