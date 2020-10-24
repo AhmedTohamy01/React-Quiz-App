@@ -30,3 +30,13 @@
   bottom: 13%;
   z-index: 1;
 }
+
+.score-bar {
+  background-color: gray;
+  height: 27.5px;
+  border-radius: 10px;
+  width: 0%;
+  max-width: 70%;
+  position: absolute;
+  z-index: 3;
+}
