@@ -21,7 +21,7 @@ function AnswerCompound({ children }) {
   const [correctAnswersNumber, setCorrectAnswersNumber] = useContext(CorrectAnswersContext)
   const [wrongAnswersNumber, setWrongAnswersNumber] = useContext(WrongAnswersContext)
   const [finalResult, setFinalResult] = useState('')
-  const [showFinishMessage, setShowFinishMessage] = useState(true)
+  const [showFinishMessage, setShowFinishMessage] = useState(false)
 
   const answersArray = [QuestionsData[currentQuestion - 1].correct_answer].concat(QuestionsData[currentQuestion - 1].incorrect_answers)
   const correctAnswer = answersArray[0]
