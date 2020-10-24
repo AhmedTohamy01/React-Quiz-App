@@ -9,6 +9,7 @@ import NextQuestionButtonWrapper from "../Components/Answer/NextQuestionButtonWr
 import { CurrentQuestionContext } from '../Context/CurrentQuestionContext'
 import { AnswerResultContext } from '../Context/AnswerResultContext'
 import { CorrectAnswersContext } from '../Context/CorrectAnswersContext'
+import { WrongAnswersContext } from '../Context/WrongAnswersContext'
 
 export default AnswerCompound
 
@@ -16,6 +17,7 @@ function AnswerCompound({ children }) {
   const [currentQuestion, setCurrentQuestion] = useContext(CurrentQuestionContext)
   const [showAnswerResult, setShowAnswerResult] = useContext(AnswerResultContext)
   const [correctAnswersNumber, setCorrectAnswersNumber] = useContext(CorrectAnswersContext)
+  const [wrongAnswersNumber, setWrongAnswersNumber] = useContext(WrongAnswersContext)
 
   const [finalResult, setFinalResult] = useState('')
 
