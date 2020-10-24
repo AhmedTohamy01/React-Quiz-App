@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import QuestionsData from '../Data/questions.json'
 import MaxScore from '../Components/ScoreBar/MaxScore'
+import LowestScoreBar from '../Components/ScoreBar/LowestScoreBar'
 import ScoreBar from '../Components/ScoreBar/ScoreBar'
 import ScoreBarData from '../Components/ScoreBar/ScoreBarData'
 import MaximumScoreBar from '../Components/ScoreBar/MaximumScoreBar'
@@ -40,6 +41,7 @@ function ScoreBarCompound({ children }) {
           </MaxScore>
         </ScoreBarData>
         <ScoreBarWrapper>
+          <LowestScoreBar />
           <ScoreBar />
           <MaximumScoreBar />
         </ScoreBarWrapper>
