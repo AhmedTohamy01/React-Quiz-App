@@ -3,6 +3,12 @@
   height: 100px;
 }
 
+@media (max-width: 768px) {
+  .answer-section-wrapper {
+    padding: 20px 30px;
+    height: 26rem;
+  }
+}
 
 .answer-buttons-wrapper {
   border: solid green;
