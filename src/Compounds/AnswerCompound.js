@@ -1,4 +1,5 @@
 import React from 'react'
+import AnswerButtonsWrapper from '../Components/Answer/AnswerButtonsWrapper'
 import AnswerSectionWrapper from '../Components/Answer/AnswerSectionWrapper'
 
 export default AnswerCompound
@@ -6,7 +7,11 @@ export default AnswerCompound
 function AnswerCompound ({ children }) {
   return (
     <>
-      <AnswerSectionWrapper />
+      <AnswerSectionWrapper>
+        <AnswerButtonsWrapper>
+          
+        </AnswerButtonsWrapper>
+      </AnswerSectionWrapper>
       {children}
     </>
   )
