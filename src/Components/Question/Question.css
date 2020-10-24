@@ -1,6 +1,12 @@
 .question-section-wrapper {
   border: solid green;
-  height: 100px;
+  padding: 20px 100px;
+}
+
+@media (max-width: 768px) {
+  .question-section-wrapper {
+    padding: 20px 30px;
+  }
 }
 
 .question-number {
