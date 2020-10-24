@@ -27,3 +27,9 @@
   border: 1px solid black;
   width: 45%;
 }
+
+.answer-result {
+  font-size: 25px;
+  font-weight: 700;
+  text-align: center;
+}
