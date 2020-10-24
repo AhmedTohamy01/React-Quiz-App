@@ -1,14 +1,17 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import MaxScore from '../Components/ScoreBar/MaxScore'
 import ScoreBar from '../Components/ScoreBar/ScoreBar'
 import ScoreBarData from '../Components/ScoreBar/ScoreBarData'
 import ScoreBarWrapper from '../Components/ScoreBar/ScoreBarWrapper'
 import ScoreSectionWrapper from '../Components/ScoreBar/ScoreSectionWrapper'
 import UserScore from '../Components/ScoreBar/UserScore'
+import { CurrentQuestionContext } from '../Context/CurrentQuestionContext'
 
 export default ScoreBarCompound
 
-function ScoreBarCompound ({ children }) {
+function ScoreBarCompound({ children }) {
+  const [currentQuestion] = useContext(CurrentQuestionContext)
+
   return (
     <>
       <ScoreSectionWrapper>
