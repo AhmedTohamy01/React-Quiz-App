@@ -8,12 +8,15 @@ import NextQuestionButton from "../Components/Answer/NextQuestionButton"
 import NextQuestionButtonWrapper from "../Components/Answer/NextQuestionButtonWrapper"
 import { CurrentQuestionContext } from '../Context/CurrentQuestionContext'
 import { AnswerResultContext } from '../Context/AnswerResultContext'
+import { CorrectAnswersContext } from '../Context/CorrectAnswersContext'
 
 export default AnswerCompound
 
 function AnswerCompound({ children }) {
   const [currentQuestion, setCurrentQuestion] = useContext(CurrentQuestionContext)
   const [showAnswerResult, setShowAnswerResult] = useContext(AnswerResultContext)
+  const [correctAnswersNumber, setCorrectAnswersNumber] = useContext(CorrectAnswersContext)
+
   const [finalResult, setFinalResult] = useState('')
 
   const answersArray = [QuestionsData[currentQuestion - 1].correct_answer].concat(QuestionsData[currentQuestion - 1].incorrect_answers)
