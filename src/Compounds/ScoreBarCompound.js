@@ -3,6 +3,7 @@ import QuestionsData from '../Data/questions.json'
 import MaxScore from '../Components/ScoreBar/MaxScore'
 import ScoreBar from '../Components/ScoreBar/ScoreBar'
 import ScoreBarData from '../Components/ScoreBar/ScoreBarData'
+import MaximumScoreBar from '../Components/ScoreBar/MaximumScoreBar'
 import ScoreBarWrapper from '../Components/ScoreBar/ScoreBarWrapper'
 import ScoreSectionWrapper from '../Components/ScoreBar/ScoreSectionWrapper'
 import UserScore from '../Components/ScoreBar/UserScore'
@@ -40,6 +41,7 @@ function ScoreBarCompound({ children }) {
         </ScoreBarData>
         <ScoreBarWrapper>
           <ScoreBar />
+          <MaximumScoreBar />
         </ScoreBarWrapper>
       </ScoreSectionWrapper>
         {children}
