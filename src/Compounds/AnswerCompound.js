@@ -18,11 +18,14 @@ function AnswerCompound({ children }) {
   return (
     <>
       <AnswerSectionWrapper>
-        <AnswerButtonsWrapper>
-          <AnswerButton>Answer1</AnswerButton>
-          <AnswerButton>Answer2</AnswerButton>
-          <AnswerButton>Answer3</AnswerButton>
-          <AnswerButton>Answer4</AnswerButton>
+      <AnswerButtonsWrapper>
+          {answersArray.map((answer, index) => (
+            <AnswerButton
+              key={index}
+            >
+              {decodeURIComponent(answer)}
+            </AnswerButton>
+          ))}
         </AnswerButtonsWrapper>
         <AnswerResult>Correct Answer!</AnswerResult>
         <NextQuestionButtonWrapper>
