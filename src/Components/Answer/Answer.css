@@ -61,3 +61,20 @@
     padding: 10px 20px;
   }
 }
+
+.finish-message {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  width: 55%;
+  padding: 50px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  height: fit-content;
+  background-color: white;
+  font-size: 40px;
+  border: 5px solid black;
+  border-radius: 10px;
+  line-height: 1.3;
+}
