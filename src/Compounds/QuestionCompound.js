@@ -1,4 +1,5 @@
 import React from 'react'
+import QuestionCategory from '../Components/Question/QuestionCategory'
 import QuestionNumber from '../Components/Question/QuestionNumber'
 import QuestionSectionWrapper from '../Components/Question/QuestionSectionWrapper'
 
@@ -9,6 +10,7 @@ function QuestionCompound ({ children }) {
     <>
       <QuestionSectionWrapper>
         <QuestionNumber />
+        <QuestionCategory />
       </QuestionSectionWrapper>
       {children}
     </>
