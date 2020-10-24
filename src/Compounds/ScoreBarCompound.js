@@ -27,7 +27,11 @@ function ScoreBarCompound({ children }) {
     <>
       <ScoreSectionWrapper>
         <ScoreBarData>
-          <UserScore>Score: 0%</UserScore>
+        <UserScore>
+            {totalAnsweredQuestions === 0
+              ? 'Score: 0%'
+              : `Score: ${Math.round(score)}%`}
+          </UserScore>
           <MaxScore>Max Score: 0%</MaxScore>
         </ScoreBarData>
         <ScoreBarWrapper>
