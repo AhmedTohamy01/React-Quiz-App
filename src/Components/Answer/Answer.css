@@ -61,3 +61,32 @@
     padding: 10px 20px;
   }
 }
+
+.finish-message {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  width: 55%;
+  padding: 50px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  height: fit-content;
+  background-color: white;
+  font-size: 40px;
+  border: 5px solid black;
+  border-radius: 10px;
+  line-height: 1.3;
+}
+
+.finish-message-overlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+}
