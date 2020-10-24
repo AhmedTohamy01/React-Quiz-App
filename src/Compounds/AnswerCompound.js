@@ -34,6 +34,18 @@ function AnswerCompound({ children }) {
     }
   }
 
+  function doButtonClickActions () {
+    setCurrentQuestion(currentQuestion + 1)
+    setShowAnswerResult('')
+
+    if (finalResult === 'correct') {
+      setCorrectAnswersNumber(correctAnswersNumber + 1)
+    } if (finalResult === 'wrong') {
+      setWrongAnswersNumber(wrongAnswersNumber + 1)
+    }
+    setFinalResult('')
+  }
+
   return (
     <>
       <AnswerSectionWrapper>
@@ -51,7 +63,7 @@ function AnswerCompound({ children }) {
         <AnswerResult>{showAnswerResult}</AnswerResult>
         <NextQuestionButtonWrapper>
           {showAnswerResult === '' ? null
-            : (<NextQuestionButton>Next Question</NextQuestionButton>)}
+            : (<NextQuestionButton onClick={doButtonClickActions}>Next Question</NextQuestionButton>)}
         </NextQuestionButtonWrapper>
       </AnswerSectionWrapper>
       {children}
