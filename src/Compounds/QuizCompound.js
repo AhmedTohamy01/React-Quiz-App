@@ -4,20 +4,24 @@ import AnswerCompound from './AnswerCompound'
 import QuestionCompound from './QuestionCompound'
 import ScoreBarCompound from './ScoreBarCompound'
 import { CurrentQuestionContext } from '../Context/CurrentQuestionContext'
+import { AnswerResultContext } from '../Context/AnswerResultContext'
 
 export default QuizCompound
 
 function QuizCompound({ children }) {
   const [currentQuestion, setCurrentQuestion] = useState(1)
+  const [showAnswerResult, setShowAnswerResult] = useState('')
 
   return (
     <>
       <CurrentQuestionContext.Provider value={[currentQuestion, setCurrentQuestion]}>
-        <ProgressBar />
-        <QuestionCompound />
-        <AnswerCompound />
-        <ScoreBarCompound />
-        {children}
+        <AnswerResultContext.Provider value={[showAnswerResult, setShowAnswerResult]}>
+          <ProgressBar />
+          <QuestionCompound />
+          <AnswerCompound />
+          <ScoreBarCompound />
+          {children}
+        </AnswerResultContext.Provider>
       </CurrentQuestionContext.Provider>
     </>
   )
