@@ -30,7 +30,8 @@ function AnswerCompound ({ children }) {
   )
   const [finalResult, setFinalResult] = useState('')
   const [showFinishMessage, setShowFinishMessage] = useState(false)
-
+  const [wrongClickedAnswer, setWrongClickedAnswer] = useState("")
+  
   const answersArray = [
     QuestionsData[currentQuestion - 1].correct_answer
   ].concat(QuestionsData[currentQuestion - 1].incorrect_answers)
