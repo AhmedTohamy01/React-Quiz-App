@@ -5,7 +5,7 @@ export default AnswerButton
 
 function AnswerButton ({ children, ...restProps }) {
   return (
-    <button className='answer-button' {...restProps}>
+    <button {...restProps}>
       {children}
     </button>
   )

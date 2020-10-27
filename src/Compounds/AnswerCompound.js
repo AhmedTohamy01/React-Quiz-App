@@ -30,7 +30,7 @@ function AnswerCompound ({ children }) {
   )
   const [finalResult, setFinalResult] = useState('')
   const [showFinishMessage, setShowFinishMessage] = useState(false)
-  const [wrongClickedAnswer, setWrongClickedAnswer] = useState("")
+  const [wrongClickedAnswer, setWrongClickedAnswer] = useState('')
 
   const answersArray = [
     QuestionsData[currentQuestion - 1].correct_answer
@@ -46,6 +46,17 @@ function AnswerCompound ({ children }) {
       setShowAnswerResult('Wrong Answer!')
       setFinalResult('wrong')
       setWrongClickedAnswer(answer)
+    }
+  }
+
+  function changeButtonColor (answer) {
+    if (answer === correctAnswer) {
+      return 'green-button'
+    }
+    if (answer === wrongClickedAnswer) {
+      return 'red-button'
+    } else {
+      return 'answer-button'
     }
   }
 
@@ -82,6 +93,9 @@ function AnswerCompound ({ children }) {
               key={index}
               disabled={showAnswerResult !== ''}
               onClick={() => checkAnswer(answer)}
+              className={
+                finalResult === '' ? 'answer-button' : changeButtonColor(answer)
+              }
             >
               {decodeURIComponent(answer)}
             </AnswerButton>
