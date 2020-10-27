@@ -6,6 +6,10 @@ body {
   margin: auto;
 }
 
+body {
+  width: 75%;
+}
+
 a {
   text-decoration: none;
 }
