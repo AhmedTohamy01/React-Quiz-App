@@ -3,20 +3,11 @@ body {
   font-family: "Hevetica Nuew", Helvetica, Arial, sans-serif;
   font-size: 16px;
   max-width: 1600px;
-  width: 75%;
   margin: auto;
 }
 
-@media (max-width: 580px) {
-  body {
-    width: 90%;
-  }
-}
-
-@media (max-width: 450px) {
-  body {
-    width: 100%;
-  }
+body {
+  width: 75%;
 }
 
 a {
