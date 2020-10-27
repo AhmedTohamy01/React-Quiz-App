@@ -30,7 +30,9 @@
   }
 }
 
-.answer-button {
+.answer-button,
+.green-button,
+.red-button {
   padding: 10px;
   border-radius: 5px;
   background-color: rgb(187, 179, 179);
@@ -43,9 +45,21 @@
 }
 
 @media (max-width: 1024px) {
-  .answer-button {
+  .answer-button,
+  .green-button,
+  .red-button {
     width: 100%;
   }
+}
+
+.green-button {
+  background-color: green;
+  color: white;
+}
+
+.red-button {
+  background-color: red;
+  color: white;
 }
 
 .answer-result {
