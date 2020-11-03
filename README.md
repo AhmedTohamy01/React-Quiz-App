@@ -2,11 +2,11 @@
 <h1 align="center">
   <img title="Outlier" src="https://pbs.twimg.com/profile_images/1158820124540821504/_G2GCB9n_400x400.jpg" alt="Outlier Logo" width="200" />
   <br>
-  Outlier Quiz Project
+  Outlier React Quiz Project
 </h1>
 
 <p><font size="3">
-  This is a Quiz Project from Outlier built using <strong><em>React.JS</em></strong> 
+  This is a Quiz App built for Outlier.org using <strong><em>React.JS</em></strong> . Outlier.org is developing a high-quality, university-level courses, taught online by some of the most celebrated educators in their respective fields. 
   <br><br> 
   <strong><em>Take a look at the live version here:</em></strong> https://react-quiz-app-theta.vercel.app/ :octocat: :heart_eyes:
 
